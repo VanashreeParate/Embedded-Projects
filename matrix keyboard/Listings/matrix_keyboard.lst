@@ -1,0 +1,100 @@
+A51 MACRO ASSEMBLER  MATRIX_KEYBOARD                                                      10/19/2023 11:59:06 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\matrix_keyboard.obj
+ASSEMBLER INVOKED BY: D:\Keil uVision5\C51\BIN\A51.EXE matrix_keyboard.s SET(SMALL) DEBUG PRINT(.\Listings\matrix_keyboa
+                      rd.lst) OBJECT(.\Objects\matrix_keyboard.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+3000                   1     ORG 3000H
+3000 3F065B4F          2     DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH, 77H, 7CH, 39H, 5EH, 79H, 71H
+3004 666D7D07                
+3008 7F6F777C                
+300C 395E7971                
+                       3     
+0000                   4     ORG 0000H
+0000 8034              5     SJMP START
+0036                   6     ORG 0036H
+0036 75A000            7     START : MOV P2, #00H
+0039 853FA0            8                     MOV P2, 03FH
+003C 7590F0            9                     MOV P1, #0F0H
+003F 903000           10                     MOV DPTR, #3000H
+0042 C290             11     LOOP1 : CLR P1.0
+0044 D291             12                     SETB P1.1
+0046 D292             13                     SETB P1.2
+0048 D293             14                     SETB P1.3
+004A 7400             15                     MOV A, #00H
+004C 309454           16                     JNB P1.4, NEXT
+004F 04               17                     INC A
+0050 309550           18                     JNB P1.5, NEXT
+0053 04               19                     INC A
+0054 30964C           20                     JNB P1.6, NEXT
+0057 04               21                     INC A
+0058 309748           22                     JNB P1.7, NEXT
+005B C291             23     LOOP2 : CLR P1.1
+005D D290             24                     SETB P1.0
+005F D292             25                     SETB P1.2
+0061 D293             26                     SETB P1.3
+0063 04               27                     INC A
+0064 30943C           28                     JNB P1.4, NEXT
+0067 04               29                     INC A
+0068 309538           30                     JNB P1.5, NEXT
+006B 04               31                     INC A
+006C 309634           32                     JNB P1.6, NEXT
+006F 04               33                     INC A
+0070 309730           34                     JNB P1.7, NEXT  
+0073 C292             35     LOOP3 : CLR P1.2
+0075 D290             36                     SETB P1.0
+0077 D291             37                     SETB P1.1
+0079 D293             38                     SETB P1.3
+007B 04               39                     INC A
+007C 309424           40                     JNB P1.4, NEXT
+007F 04               41                     INC A
+0080 309520           42                     JNB P1.5, NEXT
+0083 04               43                     INC A
+0084 30961C           44                     JNB P1.6, NEXT
+0087 04               45                     INC A
+0088 309718           46                     JNB P1.7, NEXT  
+008B C293             47     LOOP4 : CLR P1.3
+008D D291             48                     SETB P1.1
+008F D292             49                     SETB P1.2
+0091 D290             50                     SETB P1.0
+0093 04               51                     INC A
+0094 30940C           52                     JNB P1.4, NEXT
+0097 04               53                     INC A
+0098 309508           54                     JNB P1.5, NEXT
+A51 MACRO ASSEMBLER  MATRIX_KEYBOARD                                                      10/19/2023 11:59:06 PAGE     2
+
+009B 04               55                     INC A
+009C 309604           56                     JNB P1.6, NEXT
+009F 04               57                     INC A
+00A0 309700           58                     JNB P1.7, NEXT  
+                      59     
+00A3 93               60     NEXT : MOVC A, @A+DPTR
+00A4 F5A0             61                MOV P2, A
+                      62                
+                      63     END
+A51 MACRO ASSEMBLER  MATRIX_KEYBOARD                                                      10/19/2023 11:59:06 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP1. . . . . . .  C ADDR   0042H   A   
+LOOP2. . . . . . .  C ADDR   005BH   A   
+LOOP3. . . . . . .  C ADDR   0073H   A   
+LOOP4. . . . . . .  C ADDR   008BH   A   
+NEXT . . . . . . .  C ADDR   00A3H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+START. . . . . . .  C ADDR   0036H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

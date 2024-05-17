@@ -1,0 +1,63 @@
+A51 MACRO ASSEMBLER  SSD_ONE                                                              10/12/2023 19:41:57 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\ssd_one.obj
+ASSEMBLER INVOKED BY: D:\Keil uVision5\C51\BIN\A51.EXE ssd_one.asm SET(SMALL) DEBUG PRINT(.\Listings\ssd_one.lst) OBJECT
+                      (.\Objects\ssd_one.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     
+                       2     
+3000                   3     ORG 3000H
+3000 3F065B4F          4     DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH
+3004 666D7D07                
+3008 7F6F                    
+                       5     
+0000                   6     ORG 0000H
+0000 8034              7     SJMP START
+0036                   8     ORG 0036H
+0036 75A000            9     START : MOV P2, #00H
+0039 903000           10     MAIN  : MOV DPTR, #3000H
+003C 790A             11                     MOV R1, #10
+003E 7400             12     LOOP1 : MOV A, #00H
+0040 93               13                     MOVC A, @A+DPTR
+0041 F5A0             14                     MOV P2, A
+0043 A3               15                     INC DPTR
+0044 5100             16                     ACALL DELAY
+0046 D9F6             17                     DJNZ R1, LOOP1
+0048 80EF             18                     JMP MAIN
+004A 22               19     RET
+                      20     
+0200                  21     ORG 0200H
+0200 7BFF             22     DELAY : MOV R3, #0FFH
+0202 7CFF             23     AGAIN3 :MOV R4, #0FFH
+0204 7D07             24     AGAIN2 :MOV R5, #7
+0206 DDFE             25     AGAIN1 :DJNZ R5, AGAIN1
+0208 DCFA             26                     DJNZ R4, AGAIN2
+020A DBF6             27                     DJNZ R3, AGAIN3
+020C 22               28     RET
+                      29     END
+A51 MACRO ASSEMBLER  SSD_ONE                                                              10/12/2023 19:41:57 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AGAIN1 . . . . . .  C ADDR   0206H   A   
+AGAIN2 . . . . . .  C ADDR   0204H   A   
+AGAIN3 . . . . . .  C ADDR   0202H   A   
+DELAY. . . . . . .  C ADDR   0200H   A   
+LOOP1. . . . . . .  C ADDR   003EH   A   
+MAIN . . . . . . .  C ADDR   0039H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+START. . . . . . .  C ADDR   0036H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

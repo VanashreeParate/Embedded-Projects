@@ -1,0 +1,114 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    10/20/2023  21:57:38  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\KEIL UVISION5\C51\BIN\BL51.EXE .\Objects\matrix_keyboard1.obj TO .\Objects\matrix_keyboard PRINT (.\Listings\matrix_k
+>> eyboard.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\matrix_keyboard1.obj (MATRIX_KEYBOARD1)
+
+
+LINK MAP OF MODULE:  .\Objects\matrix_keyboard (MATRIX_KEYBOARD1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     3010H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\matrix_keyboard (MATRIX_KEYBOARD1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MATRIX_KEYBOARD1
+  C:003EH         SYMBOL        BACK
+  C:0050H         SYMBOL        LOOP1
+  C:0069H         SYMBOL        LOOP2
+  C:0081H         SYMBOL        LOOP3
+  C:0099H         SYMBOL        LOOP4
+  C:00B1H         SYMBOL        NEXT
+  D:0090H         SYMBOL        P1
+  D:00A0H         SYMBOL        P2
+  C:0035H         SYMBOL        START
+  C:0000H         LINE#         5
+  C:0035H         LINE#         7
+  C:0038H         LINE#         8
+  C:003BH         LINE#         9
+  C:003EH         LINE#         10
+  C:0040H         LINE#         11
+  C:0042H         LINE#         12
+  C:0044H         LINE#         13
+  C:0046H         LINE#         14
+  C:0048H         LINE#         15
+  C:004BH         LINE#         16
+  C:004EH         LINE#         17
+  C:0050H         LINE#         18
+  C:0052H         LINE#         19
+  C:0054H         LINE#         20
+  C:0056H         LINE#         21
+  C:0058H         LINE#         22
+  C:005AH         LINE#         23
+  C:005DH         LINE#         24
+  C:005EH         LINE#         25
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  10/20/2023  21:57:38  PAGE 2
+
+
+  C:0061H         LINE#         26
+  C:0062H         LINE#         27
+  C:0065H         LINE#         28
+  C:0066H         LINE#         29
+  C:0069H         LINE#         30
+  C:006BH         LINE#         31
+  C:006DH         LINE#         32
+  C:006FH         LINE#         33
+  C:0071H         LINE#         34
+  C:0072H         LINE#         35
+  C:0075H         LINE#         36
+  C:0076H         LINE#         37
+  C:0079H         LINE#         38
+  C:007AH         LINE#         39
+  C:007DH         LINE#         40
+  C:007EH         LINE#         41
+  C:0081H         LINE#         42
+  C:0083H         LINE#         43
+  C:0085H         LINE#         44
+  C:0087H         LINE#         45
+  C:0089H         LINE#         46
+  C:008AH         LINE#         47
+  C:008DH         LINE#         48
+  C:008EH         LINE#         49
+  C:0091H         LINE#         50
+  C:0092H         LINE#         51
+  C:0095H         LINE#         52
+  C:0096H         LINE#         53
+  C:0099H         LINE#         54
+  C:009BH         LINE#         55
+  C:009DH         LINE#         56
+  C:009FH         LINE#         57
+  C:00A1H         LINE#         58
+  C:00A2H         LINE#         59
+  C:00A5H         LINE#         60
+  C:00A6H         LINE#         61
+  C:00A9H         LINE#         62
+  C:00AAH         LINE#         63
+  C:00ADH         LINE#         64
+  C:00AEH         LINE#         65
+  C:00B1H         LINE#         67
+  C:00B2H         LINE#         68
+  -------         ENDMOD        MATRIX_KEYBOARD1
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0091H BYTE ( 7%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=12304
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,107 @@
+A51 MACRO ASSEMBLER  MATRIX_KEYBOARD1                                                     10/20/2023 21:57:38 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\matrix_keyboard1.obj
+ASSEMBLER INVOKED BY: D:\Keil uVision5\C51\BIN\A51.EXE matrix_keyboard1.s SET(SMALL) DEBUG PRINT(.\Listings\matrix_keybo
+                      ard1.lst) OBJECT(.\Objects\matrix_keyboard1.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+3000                   1     ORG 3000H;         SSD lookup table
+3000 3F065B4F          2     DB 3FH, 06H, 5BH, 4FH, 66H, 6DH, 7DH, 07H, 7FH, 6FH, 77H, 7CH, 39H, 5EH, 79H, 71H
+3004 666D7D07                
+3008 7F6F777C                
+300C 395E7971                
+                       3             
+0000                   4     ORG 0000H
+0000 8033              5     SJMP START
+0035                   6     ORG 0035H
+0035 7590F0            7     START : MOV P1, #0F0H
+0038 75A000            8                     MOV P2, #00H
+003B 903000            9                     MOV DPTR, #3000H
+003E C290             10     BACK :  CLR P1.0
+0040 C291             11                     CLR P1.1
+0042 C292             12                     CLR P1.2
+0044 C293             13                     CLR P1.3
+0046 A990             14                     MOV R1, P1
+0048 B9F005           15                     CJNE R1, #0F0H, LOOP1
+004B 75A03F           16                     MOV P2, #03FH
+004E 80EE             17                     JMP BACK
+0050 C290             18                     LOOP1 : CLR P1.0
+0052 D291             19                                     SETB P1.1
+0054 D292             20                                     SETB P1.2
+0056 D293             21                                     SETB P1.3
+0058 7400             22                                     MOV A, #00H
+005A 309454           23                                     JNB P1.4, NEXT
+005D 04               24                                     INC A
+005E 309550           25                                     JNB P1.5, NEXT
+0061 04               26                                     INC A
+0062 30964C           27                                     JNB P1.6, NEXT
+0065 04               28                                     INC A
+0066 309748           29                                     JNB P1.7, NEXT
+0069 D290             30                     LOOP2 : SETB P1.0
+006B C291             31                                     CLR P1.1
+006D D292             32                                     SETB P1.2
+006F D293             33                                     SETB P1.3
+0071 04               34                                     INC A
+0072 30943C           35                                     JNB P1.4, NEXT
+0075 04               36                                     INC A
+0076 309538           37                                     JNB P1.5, NEXT
+0079 04               38                                     INC A
+007A 309634           39                                     JNB P1.6, NEXT
+007D 04               40                                     INC A
+007E 309730           41                                     JNB P1.7, NEXT
+0081 D290             42                     LOOP3 : SETB P1.0
+0083 D291             43                                     SETB P1.1
+0085 C292             44                                     CLR P1.2
+0087 D293             45                                     SETB P1.3
+0089 04               46                                     INC A
+008A 309424           47                                     JNB P1.4, NEXT
+008D 04               48                                     INC A
+008E 309520           49                                     JNB P1.5, NEXT
+0091 04               50                                     INC A
+0092 30961C           51                                     JNB P1.6, NEXT
+0095 04               52                                     INC A
+0096 309718           53                                     JNB P1.7, NEXT
+0099 D290             54                     LOOP4 : SETB P1.0
+A51 MACRO ASSEMBLER  MATRIX_KEYBOARD1                                                     10/20/2023 21:57:38 PAGE     2
+
+009B D291             55                                     SETB P1.1
+009D D292             56                                     SETB P1.2
+009F C293             57                                     CLR P1.3
+00A1 04               58                                     INC A
+00A2 30940C           59                                     JNB P1.4, NEXT
+00A5 04               60                                     INC A
+00A6 309508           61                                     JNB P1.5, NEXT
+00A9 04               62                                     INC A
+00AA 309604           63                                     JNB P1.6, NEXT
+00AD 04               64                                     INC A
+00AE 309700           65                                     JNB P1.7, NEXT
+                      66     
+00B1 93               67                     NEXT : MOVC A, @A+DPTR
+00B2 F5A0             68                                MOV P2,A
+                      69     END
+A51 MACRO ASSEMBLER  MATRIX_KEYBOARD1                                                     10/20/2023 21:57:38 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+BACK . . . . . . .  C ADDR   003EH   A   
+LOOP1. . . . . . .  C ADDR   0050H   A   
+LOOP2. . . . . . .  C ADDR   0069H   A   
+LOOP3. . . . . . .  C ADDR   0081H   A   
+LOOP4. . . . . . .  C ADDR   0099H   A   
+NEXT . . . . . . .  C ADDR   00B1H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+START. . . . . . .  C ADDR   0035H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
